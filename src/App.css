@@ -1,0 +1,403 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
+
+
+
+:root {
+    --pink: #FFC0C7;
+    --grey: #F3ECEA;
+    --yellow: #FFF4A3;
+    --green: #D9EEE1;
+    --blue: #96D4D4;
+    --grey2: #c2fad5;
+    --orang: #fad5a1;
+    --orange: #ff7800;
+    --black: #130f40;
+    --light-color: #666;
+}
+
+* {
+    font-family: 'Inter', 'Poppins', sans-serif;
+    list-style: none;
+}
+
+input {
+    overflow: visible;
+}
+
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    /* background: #ececec; */
+    background: linear-gradient(205deg, #ffd89b 25%, #12C2E9 25%, #ffd89b 90%, #ffd89b 100%);
+    overflow: hidden;
+}
+
+/* nav starts */
+
+nav {
+    padding-left: 80px;
+    background-color: #ffd89b;
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+.navBox {
+    padding: 0 3% 0 1%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* .options {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1.1rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+} */
+
+.navUtils {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1.1rem;
+    font-size: 1.2rem;
+}
+
+.navbtn:hover .navcard {
+    display: block;
+    position: absolute;
+    top: 47px;
+    font-size: 1.1rem;
+    /* right: 765px; */
+    background: #ffffff45;
+    padding: 15px;
+    z-index: 99;
+    backdrop-filter: blur(5px);
+}
+
+.navcard ul li:hover{
+    font-weight: 500;
+}
+
+
+
+/* .logo h3 {
+    font-size: 1.7rem;
+    font-weight: 600;
+    cursor: pointer;
+} */
+
+.sidebar{
+    background: none !important;
+}
+
+/* nav ends */
+
+/* previous page css */
+
+.pcard {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pcard .card-container {
+    display: flex;
+    overflow-x: scroll;
+    white-space: nowrap;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    padding: 50px 0;
+}
+
+.pcard .card-container h3 {
+    font-size: 2.3rem;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 10px;
+}
+
+
+.pcard .card-container::-webkit-scrollbar {
+    display: none;
+}
+
+.pcard .star {
+    content: '';
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: linear-gradient(#2196f3, #31ff38);
+    border-radius: 80%;
+    transform: translate(50px, 50px);
+}
+
+.pcard .box {
+    position: relative;
+    min-width: 350px;
+    min-height: 240px;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, .1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    z-index: 10;
+    padding: 20px;
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    margin: 0 15px 85px 12px;
+    display: flex;
+    justify-content: space-between;
+    overflow-x: scroll;
+    gap: 1rem;
+}
+
+.pcard .box h3 {
+    background: linear-gradient(to left, orange, purple);
+    margin-bottom: 20px;
+    font-size: 30px;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+}
+
+.pcard .box .list {
+    position: relative;
+    display: flex;
+    padding: 10px;
+    margin: 10px 0px;
+    border-radius: 10px;
+    /* background: radial-gradient(18% 28% at 24% 50%, #CEFAFFFF 7%, #073AFF00 100%), radial-gradient(18% 28% at 18% 71%, #FFFFFF59 6%, #073AFF00 100%), radial-gradient(70% 53% at 36% 76%, #73F2FFFF 0%, #073AFF00 100%), radial-gradient(42% 53% at 15% 94%, #FFFFFFFF 7%, #073AFF00 100%), radial-gradient(42% 53% at 34% 72%, #FFFFFFFF 7%, #073AFF00 100%), radial-gradient(18% 28% at 35% 87%, #FFFFFFFF 7%, #073AFF00 100%), radial-gradient(31% 43% at 7% 98%, #FFFFFFFF 24%, #073AFF00 100%), radial-gradient(21% 37% at 72% 23%, #D3FF6D9C 24%, #073AFF00 100%), radial-gradient(35% 56% at 91% 74%, #8A4FFFF5 9%, #073AFF00 100%), radial-gradient(74% 86% at 67% 38%, #6DFFAEF5 24%, #073AFF00 100%), linear-gradient(125deg, #4EB5FFFF 1%, #4C00FCFF 100%); */
+    background: linear-gradient(120deg, #ffd3a3 0%, #f64f59 100%);
+    cursor: pointer;
+    transition: 0.8s;
+    overflow: hidden;
+    max-width: 15rem;
+    min-width: 11rem;
+    width: 15rem;
+    max-height: 19rem;
+    height: 11rem;
+    z-index: 10;
+}
+
+.pcard .box .list:hover {
+    background: #fff;
+    z-index: 11;
+    box-shadow: -15px 30px 50px rgba(0, 0, 0, .5);
+    transform: scale(1.15) translateX(30px) translateY(-5px);
+    height: 16rem;
+}
+.pcard .box .list.active {
+    background: #fff;
+    z-index: 11;
+    box-shadow: -15px 30px 50px rgba(0, 0, 0, .5);
+    transform: scale(1.15) translateX(30px) translateY(-5px);
+    height: 16rem;
+}
+
+.pcard .box .list .imgBx {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.pcard .box .list .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.pcard .box .list .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    left: 0;
+    transition: 0.5s;
+    top: 52px;
+    position: relative;
+    left: -9px;
+}
+
+.pcard .box .list:hover .content {
+    position: relative;
+    left: -66px;
+    top: 26px;
+}
+.pcard .box .list.active .content {
+    position: relative;
+    left: -66px;
+    top: 26px;
+}
+
+
+
+.pcard .box .list .content .rank {
+    position: absolute;
+    right: -110px;
+    color: darkgoldenrod;
+    transition: 0.5s;
+    font-size: 2em;
+    top: -51px;
+}
+
+.pcard .box .list .content .small {
+    font-weight: 500;
+    opacity: 0.25;
+}
+
+.pcard .box .list:hover .content .rank {
+    right: -78px;
+    top: -12px;
+}
+.pcard .box .list.active .content .rank {
+    right: -78px;
+    top: -12px;
+}
+
+
+.pcard .box .list .content h4 a {
+    color: #fff;
+    line-height: 1.2em;
+    font-weight: 600;
+    transition: 0.5s;
+    text-decoration: none;
+}
+
+.pcard .box .list .content p {
+    font-size: 0.75em;
+    transition: 0.5s;
+}
+
+.pcard .box .list:hover .content h4 a,
+.pcard .box .list:hover .content p {
+    color: #333;
+}
+.pcard .box .list.active .content h4 a,
+.pcard .box .list.active .content p {
+    color: #333;
+}
+
+.pcard .box .list .content .units {
+    position: relative;
+    left: -133px;
+}
+
+
+.pcard .box .list:hover .content .units {
+    color: black;
+    left: 5px;
+    top: 16px;
+}
+.pcard .box .list.active .content .units {
+    color: black;
+    left: 5px;
+    top: 16px;
+}
+
+.pcard .box .list:hover .content .units .viewA {
+    font-size: .8rem;
+    margin: 0px 1px;
+}
+.pcard .box .list.active .content .units .viewA {
+    font-size: .8rem;
+    margin: 0px 1px;
+}
+
+.pcard .box .list:hover .content .units .a:hover {
+    color: #1e19bb;
+    font-weight: 600;
+}
+.pcard .box .list.active .content .units .a.active {
+    color: #1e19bb;
+    font-weight: 600;
+}
+
+.pcard .box .list:hover .content .units .viewA:hover {
+    color: #ff7800;
+    text-decoration: underline;
+}
+.pcard .box .list.active .content .units .viewA.active {
+    color: #ff7800;
+    text-decoration: underline;
+}
+
+/* previous css ends  */
+
+/* mainPg section starts  */
+
+.mainPg {
+    padding: 0 0 0 80px;
+}
+/* mainPg section ends  */
+
+.footer{
+    background: rgba(255, 255, 255, 0);
+}
+
+
+@media(max-width:467px){
+
+    .pcard .card-container h3{
+        font-size: 1.3rem;
+    }
+
+    .pcard .box{
+        min-width: 350px;
+        min-height: 190px;
+        margin: 0 15px 25px 12px;
+    }
+
+    .pcard .box .list{
+        min-width: 8rem;
+        height: 8rem;
+    }
+
+    .pcard .box .list .imgBx{
+        width: 25px;
+        height: 34px;
+    }
+
+    .pcard .box .list:hover .content{
+        left: -25px;
+    }
+
+    .pcard .box .list:hover .content .rank {
+        right: -25px;
+        top: -33px;
+      }
+    .pcard .box .list.active .content{
+        left: -25px;
+    }
+
+    .pcard .box .list.active .content .rank {
+        right: -25px;
+        top: -33px;
+      }
+    
+    .sidebar{
+        translate: 0 0;
+    }
+}
